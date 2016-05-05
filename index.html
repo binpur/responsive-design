@@ -8,7 +8,7 @@
 <body>
 
   <div class="wrapper">
-    <div class="layout " >
+    <div class="layout" >
       <div class="c box">
         <div class="divpadding">
           c
@@ -33,24 +33,20 @@
   <script src="js/jquery-1.12.3.min.js"></script>
   <script type="text/javascript">
 
-  $(document).ready(function() {
-
-    var reorderBlocks = function() {
-      var current_width = $(window).width();
-      if(current_width < 981 && current_width > 480){
-        $(".b").insertBefore($( ".c" ));
-      }else{
-
-        $(".b").insertAfter($( ".c" ));
-      }
+  var reorderBlocks = function() {
+    var current_width = $(window).width();
+    if(current_width < 981 && current_width > 480){
+      $(".b").insertBefore($(".c"));
+    }else{
+      $(".b").insertAfter($(".c"));
     }
+  }
 
+  $(document).ready(function() {
     reorderBlocks();
-
     $(window).resize(function(){
       reorderBlocks();
     });
-
   });
 
   </script>
